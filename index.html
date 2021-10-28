@@ -11,16 +11,16 @@
 
 <body>
   <div class="container">
-    <header>
+    <header class="header">
       <h1>Teste de Einstein</h1>
       <p>Albert Einstein criou este teste de QI (raciocínio lógico) no século passado e afirmou que 98% da população
         mundial não era capaz de resolvê-lo. Será que você faz parte desse seleto grupo que consegue resolvê-lo?</p>
     </header>
     <div class="game">
       <div class="container-columns">
-        <div class="column">
-          <span> </span>
-          <ul>
+        <div class="column1">
+          <span>&nbsp</span>
+          <ul class="types">
             <li>Cor</li>
             <li>Nacionalidade</li>
             <li>Bebida</li>
@@ -29,13 +29,13 @@
           </ul>
         </div>
         <!-- House 1 -->
-        <div class="column">
+        <div class="column2">
           <span class="title">Casa #1</span>
           <ul class="house">
             <!-- Colors -->
             <li>
-              <select name="list" onchange="change(this)">
-                <option value="clean"></option>
+              <select class="colors" name="list" onchange="selectColor(this)">
+                <option value=""></option>
                 <option value="yellow">amarela</option>
                 <option value="blue">azul</option>
                 <option value="white">branca</option>
@@ -90,18 +90,18 @@
           </ul>
         </div>
         <!-- House 2 -->
-        <div class="column">
+        <div class="column3">
           <span class="title">Casa #2</span>
           <ul class="house">
             <!-- Colors -->
             <li>
-              <select>
-                <option value="-1"></option>
-                <option value="0">amarela</option>
-                <option value="1">azul</option>
-                <option value="2">branca</option>
-                <option value="3">verde</option>
-                <option value="4">vermelha</option>
+              <select class="colors" name="list" onchange="selectColor(this)">
+                <option value=""></option>
+                <option value="yellow">amarela</option>
+                <option value="blue">azul</option>
+                <option value="white">branca</option>
+                <option value="green">verde</option>
+                <option value="red">vermelha</option>
               </select>
             </li>
             <!-- Nationalities -->
@@ -151,7 +151,7 @@
           </ul>
         </div>
         <!-- House 3 -->
-        <div class="column">
+        <div class="column4">
           <span class="title">Casa #3</span>
           <ul class="house">
             <!-- Colors -->
@@ -212,7 +212,7 @@
           </ul>
         </div>
         <!-- House 4 -->
-        <div class="column">
+        <div class="column5">
           <span class="title">Casa #4</span>
           <ul class="house">
             <!-- Colors -->
@@ -273,7 +273,7 @@
           </ul>
         </div>
         <!-- House 5 -->
-        <div class="column">
+        <div class="column6">
           <span class="title">Casa #5</span>
           <ul class="house">
             <!-- Colors -->
