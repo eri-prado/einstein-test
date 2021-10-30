@@ -1,23 +1,36 @@
-function selectColor(list) {
-  const houses = document.querySelectorAll(".house");
+function colorHouse1(list) {
   const optionValue = list.options[list.selectedIndex].value
-
-
-  function change(item) {
-    [].forEach.call(houses, house => {
-      if (house.className === optionValue) {
-        house.classList.toggle(optionValue)
-      }
-    })
-    item.classList.toggle(optionValue);
-  }
-
-  [].forEach.call(houses, house => {
-    house.addEventListener("change", function () {
-      change(this, optionValue)
-    })
-  })
+  const house = document.getElementById("house1")
+  house.style.background = optionValue
 }
+
+function colorHouse2(list) {
+  const optionValue = list.options[list.selectedIndex].value
+  const house = document.getElementById("house2")
+  house.style.background = optionValue
+}
+
+function colorHouse3(list) {
+  const optionValue = list.options[list.selectedIndex].value
+  const house = document.getElementById("house3")
+  house.style.background = optionValue
+}
+
+function colorHouse4(list) {
+  const optionValue = list.options[list.selectedIndex].value
+  const house = document.getElementById("house4")
+  house.style.background = optionValue
+}
+
+function colorHouse5(list) {
+  const optionValue = list.options[list.selectedIndex].value
+  const house = document.getElementById("house5")
+  house.style.background = optionValue
+}
+
+
+
+
 
 
 
