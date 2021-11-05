@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --body-bg: #fafafa;
+  --text-color: #555;
+  --border: #e7e7e7;
+  --select-bg: #fff;
+  --select-text: #555;
+}
+
+.dark-mode:root {
+  --body-bg: #212529;
+  --text-color: #899095;
+  --border: #899095;
+  --select-bg: #555;
+  --select-text: #e7e7e7;
+}
+
 body,
 h1,
 h1,
@@ -16,8 +34,10 @@ div {
 }
 
 body {
-  font-size: 0.85rem;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 h1 {
@@ -25,27 +45,8 @@ h1 {
 }
 
 p {
-  padding: 0 25px;
-  font-size: 1rem;
   line-height: 1.5;
   font-weight: 300;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1080px;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.container-columns {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 2rem;
-  margin: 0 0 1rem 0;
-  text-align: center;
   align-items: center;
 }
 
@@ -54,20 +55,47 @@ p {
   text-align: center;
 }
 
-.types {
+.description {
+  padding: 0 25px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.container-columns {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+}
+
+.category {
+  font-family: 'Roboto', Helvetica, sans-serif;
   margin: 7px;
   padding: 10px;
 }
 
-.types li {
+.category li {
+  text-align: center;
   padding: 9.5px 0;
 }
 
 .house {
+  width: 150px;
   margin: 5px;
   padding: 10px;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--border);
   border-radius: 0.25rem;
+}
+
+.nameHouses {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 select {
@@ -78,9 +106,9 @@ select {
   font-size: inherit;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  border: 1px solid #ced4da;
+  color: var(--select-text);
+  background-color: var(--select-bg);
+  border: 1px solid var(--border);
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -88,10 +116,34 @@ select {
 .clues {
   display: flex;
   line-height: 1.5;
+  margin: 15px 25px 15px 125px;
 }
 
 .clues ul {
-  margin: 0 auto;
   column-count: 2;
-  padding: 0 2rem;
+}
+
+.clues ul li {
+  border-bottom: 1px solid var(--border);
+  page-break-inside: avoid;
+  padding: 0.075rem 0;
+}
+
+@media (max-width: 768px) {
+  .clues {
+    display: flex;
+    line-height: 1.5;
+    margin: 15px 0px;
+  }
+
+  .clues ul {
+    margin: 0 auto;
+    column-count: auto;
+    padding: 0 1.5rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
 }

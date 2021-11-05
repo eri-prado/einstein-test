@@ -10,17 +10,21 @@
 </head>
 
 <body>
+  
   <div class="container">
+    <label for="switch">
+      <input type="checkbox" id="switch"> Modo Escuro
+    </label>
     <header class="header">
       <h1>Teste de Einstein</h1>
-      <p>Albert Einstein criou este teste de QI (raciocínio lógico) no século passado e afirmou que 98% da população
+      <p class="description">Albert Einstein criou este teste de QI (raciocínio lógico) no século passado e afirmou que 98% da população
         mundial não era capaz de resolvê-lo. Será que você faz parte desse seleto grupo que consegue resolvê-lo?</p>
     </header>
     <div class="game">
       <div class="container-columns">
         <div class="column1">
           <span>&nbsp</span>
-          <ul class="types">
+          <ul class="category">
             <li>Cor</li>
             <li>Nacionalidade</li>
             <li>Bebida</li>
@@ -30,17 +34,17 @@
         </div>
         <!-- House 1 -->
         <div class="column2">
-          <span class="title">Casa #1</span>
+          <span class="nameHouses">Casa #1</span>
           <ul class="house" id="house1">
             <!-- Colors -->
             <li>
               <select class="colors" name="list" onchange="colorHouse1(this)">
                 <option value=""></option>
-                <option value="yellow">amarela</option>
-                <option value="blue">azul</option>
-                <option value="white">branca</option>
-                <option value="green">verde</option>
-                <option value="red">vermelha</option>
+                <option value="#FFDC00">amarela</option>
+                <option value="#0074D9">azul</option>
+                <option value="#fff">branca</option>
+                <option value="#2ECC40">verde</option>
+                <option value="#FF4136">vermelha</option>
               </select>
             </li>
             <!-- Nationalities -->
@@ -91,17 +95,17 @@
         </div>
         <!-- House 2 -->
         <div class="column3">
-          <span class="title">Casa #2</span>
+          <span class="nameHouses">Casa #2</span>
           <ul class="house" id="house2">
             <!-- Colors -->
             <li>
               <select class="colors" name="list" onchange="colorHouse2(this)">
                 <option value=""></option>
-                <option value="yellow">amarela</option>
-                <option value="blue">azul</option>
-                <option value="white">branca</option>
-                <option value="green">verde</option>
-                <option value="red">vermelha</option>
+                <option value="#FFDC00">amarela</option>
+                <option value="#0074D9">azul</option>
+                <option value="#fff">branca</option>
+                <option value="#2ECC40">verde</option>
+                <option value="#FF4136">vermelha</option>
               </select>
             </li>
             <!-- Nationalities -->
@@ -152,17 +156,17 @@
         </div>
         <!-- House 3 -->
         <div class="column4">
-          <span class="title">Casa #3</span>
+          <span class="nameHouses">Casa #3</span>
           <ul class="house" id="house3">
             <!-- Colors -->
             <li>
               <select class="colors" name="list" onchange="colorHouse3(this)">
                 <option value=""></option>
-                <option value="yellow">amarela</option>
-                <option value="blue">azul</option>
-                <option value="white">branca</option>
-                <option value="green">verde</option>
-                <option value="red">vermelha</option>
+                <option value="#FFDC00">amarela</option>
+                <option value="#0074D9">azul</option>
+                <option value="#fff">branca</option>
+                <option value="#2ECC40">verde</option>
+                <option value="#FF4136">vermelha</option>
               </select>
             </li>
             <!-- Nationalities -->
@@ -213,17 +217,17 @@
         </div>
         <!-- House 4 -->
         <div class="column5">
-          <span class="title">Casa #4</span>
+          <span class="nameHouses">Casa #4</span>
           <ul class="house" id="house4">
             <!-- Colors -->
             <li>
               <select class="colors" name="list" onchange="colorHouse4(this)">
                 <option value=""></option>
-                <option value="yellow">amarela</option>
-                <option value="blue">azul</option>
-                <option value="white">branca</option>
-                <option value="green">verde</option>
-                <option value="red">vermelha</option>
+                <option value="#FFDC00">amarela</option>
+                <option value="#0074D9">azul</option>
+                <option value="#fff">branca</option>
+                <option value="#2ECC40">verde</option>
+                <option value="#FF4136">vermelha</option>
               </select>
             </li>
             <!-- Nationalities -->
@@ -274,17 +278,17 @@
         </div>
         <!-- House 5 -->
         <div class="column6">
-          <span class="title">Casa #5</span>
+          <span class="nameHouses">Casa #5</span>
           <ul class="house" id="house5">
             <!-- Colors -->
             <li>
               <select class="colors" name="list" onchange="colorHouse5(this)">
                 <option value=""></option>
-                <option value="yellow">amarela</option>
-                <option value="blue">azul</option>
-                <option value="white">branca</option>
-                <option value="green">verde</option>
-                <option value="red">vermelha</option>
+                <option value="#FFDC00">amarela</option>
+                <option value="#0074D9">azul</option>
+                <option value="#fff">branca</option>
+                <option value="#2ECC40">verde</option>
+                <option value="#FF4136">vermelha</option>
               </select>
             </li>
             <!-- Nationalities -->
@@ -339,69 +343,69 @@
         <ul>
           <li>
             <span></span>
-            O Inglês vive na casa Vermelha.
+            <p>O Inglês vive na casa Vermelha.</p>
           </li>
           <li>
             <span></span>
-            O Sueco tem Cachorros como animais de estimação.
+            <p>O Sueco tem Cachorros como animais de estimação.</p>
           </li>
           <li>
             <span></span>
-            O Dinamarquês bebe Chá.
+            <p>O Dinamarquês bebe Chá.</p>
           </li>
           <li>
             <span></span>
-            A casa Verde fica do lado esquerdo da casa Branca.
+            <p>A casa Verde fica do lado esquerdo da casa Branca.</p>
           </li>
           <li>
             <span></span>
-            O homem que vive na casa Verde bebe Café.
+            <p>O homem que vive na casa Verde bebe Café.</p>
           </li>
           <li>
             <span></span>
-            O homem que fuma Pall Mall cria Pássaros.
+            <p>O homem que fuma Pall Mall cria Pássaros.</p>
           </li>
           <li>
             <span></span>
-            O homem que vive na casa Amarela fuma Dunhill.
+            <p>O homem que vive na casa Amarela fuma Dunhill.</p>
           </li>
           <li>
             <span></span>
-            O homem que vive na casa do meio bebe Leite.
+            <p>O homem que vive na casa do meio bebe Leite.</p>
           </li>
           <li>
             <span></span>
-            O Norueguês vive na primeira casa.
+            <p>O Norueguês vive na primeira casa.</p>
           </li>
           <li>
             <span></span>
-            O homem que fuma Blends vive ao lado do que tem Gatos.
-          </li>
-
-          <li>
-            <span></span>
-            O homem que cria Cavalos vive ao lado do que fuma Dunhill.
+            <p>O homem que fuma Blends vive ao lado do que tem Gatos.</p>
           </li>
           <li>
             <span></span>
-            O homem que fuma Blue Master bebe Cerveja.
+            <p>O homem que cria Cavalos vive ao lado do que fuma Dunhill.</p>
           </li>
           <li>
             <span></span>
-            O Alemão fuma Prince.
+            <p>O homem que fuma Blue Master bebe Cerveja.</p>
           </li>
           <li>
             <span></span>
-            O Norueguês vive ao lado da casa Azul.
+            <p>O Alemão fuma Prince.</p>
           </li>
           <li>
             <span></span>
-            O homem que fuma Blends é vizinho do que bebe Água.
+            <p>O Norueguês vive ao lado da casa Azul.</p>
+          </li>
+          <li>
+            <span></span>
+            <p>O homem que fuma Blends é vizinho do que bebe Água.</p>
           </li>
         </ul>
       </div>
     </div>
-
+    <button onclick="reset()">Resetar</button>
+    <button onclick="solution()">Solução</button>
   </div>
   <script src="js/script.js"></script>
 </body>

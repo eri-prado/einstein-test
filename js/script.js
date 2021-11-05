@@ -1,3 +1,13 @@
+// Dark Mode
+const html = document.querySelector('html')
+const checkbox = document.querySelector('#switch')
+
+checkbox.addEventListener('change', function () {
+  html.classList.toggle('dark-mode')
+})
+
+
+// Change colors
 function colorHouse1(list) {
   const optionValue = list.options[list.selectedIndex].value
   const house = document.getElementById("house1")
@@ -28,30 +38,7 @@ function colorHouse5(list) {
   house.style.background = optionValue
 }
 
-
-
-
-
-
-
-
-  // if (optionValue == "yellow") {
-  //   house.classList.add('yellow')
-
-  // for (var i = 0; i < house.length; ++i) {
-  //   var item = house[i]
-  //   item.style.background = optionValue
-  // }
-
-  // house.style.background = optionValue
-
-// function change(listColors) {
-//   var optionValue = listColors.options[listColors.selectedIndex].value
-//   var house = document.querySelectorAll(".house")
-//   for (var i = 0; i < house.length; ++i) {
-//     var item = house[i]
-//     item.style.background = optionValue
-//   }
-
-// }
-
+// Solution
+function solution() {
+  
+}
