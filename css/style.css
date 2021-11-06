@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
 
 :root {
   --body-bg: #fafafa;
+  --title-color: #8AB4F8;
   --text-color: #555;
   --border: #e7e7e7;
   --select-bg: #fff;
@@ -10,6 +13,7 @@
 
 .dark-mode:root {
   --body-bg: #212529;
+  --title-color: #8AB4F8;
   --text-color: #899095;
   --border: #899095;
   --select-bg: #555;
@@ -34,19 +38,24 @@ div {
 }
 
 body {
-  background-color: var(--body-bg);
-  color: var(--text-color);
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 1rem;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--body-bg);
 }
 
 h1 {
-  margin-bottom: 15px;
+  font-family: 'Mochiy Pop One', Arial, sans-serif;
+  font-size: 3rem;
+  color: var(--title-color);
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 p {
-  line-height: 1.5;
-  font-weight: 300;
+  line-height: 1.75;
+  font-weight: 400;
   align-items: center;
 }
 
@@ -65,14 +74,13 @@ p {
 }
 
 .container-columns {
-  font-family: 'Roboto', Helvetica, sans-serif;
   display: flex;
   overflow-x: auto;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .category {
-  font-family: 'Roboto', Helvetica, sans-serif;
   margin: 7px;
   padding: 10px;
 }
@@ -88,10 +96,10 @@ p {
   padding: 10px;
   border: 1px solid var(--border);
   border-radius: 0.25rem;
+  box-shadow: 0px 0px 5px 1px rgba(177, 177, 177, 0.11);
 }
 
 .nameHouses {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 700;
   display: flex;
@@ -144,6 +152,11 @@ select {
 
   p {
     text-align: center;
+  }
+
+  h1 {
+    line-height: 1.1;
+    letter-spacing: 2px;
   }
 
 }
