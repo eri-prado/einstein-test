@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+:root {
+  --body-bg: #fafafa;
+  --title-color: #8AB4F8;
+  --text-color: #555;
+  --border: #e7e7e7;
+  --select-bg: #fff;
+  --select-text: #555;
+  --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.100);
+}
+
+.dark-mode:root {
+  --body-bg: #212529;
+  --title-color: #8AB4F8;
+  --text-color: #899095;
+  --border: #555;
+  --select-bg: #555;
+  --select-text: #e7e7e7;
+  --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.300);
+}
+
 body,
 h1,
 h1,
@@ -16,36 +39,24 @@ div {
 }
 
 body {
-  font-size: 0.85rem;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--body-bg);
 }
 
 h1 {
-  margin-bottom: 15px;
+  font-family: 'Mochiy Pop One', Arial, sans-serif;
+  font-size: 3rem;
+  color: var(--title-color);
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 p {
-  padding: 0 25px;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 300;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1080px;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-}
-
-.container-columns {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 2rem;
-  margin: 0 0 1rem 0;
-  text-align: center;
+  line-height: 1.75;
+  font-weight: 400;
   align-items: center;
 }
 
@@ -54,20 +65,46 @@ p {
   text-align: center;
 }
 
-.types {
+.description {
+  padding: 0 25px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.container-columns {
+  display: flex;
+  overflow-x: auto;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.category {
   margin: 7px;
   padding: 10px;
 }
 
-.types li {
+.category li {
+  text-align: center;
   padding: 9.5px 0;
 }
 
 .house {
+  width: 150px;
   margin: 5px;
   padding: 10px;
-  border: 1px solid #dee2e6;
+  deco border: 1px solid var(--border);
   border-radius: 0.25rem;
+  box-shadow: var(--box-shadow);
+}
+
+.nameHouses {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 select {
@@ -78,9 +115,9 @@ select {
   font-size: inherit;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  border: 1px solid #ced4da;
+  color: var(--select-text);
+  background-color: var(--select-bg);
+  border: 1px solid var(--border);
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -88,10 +125,95 @@ select {
 .clues {
   display: flex;
   line-height: 1.5;
+  margin: 15px 25px 15px 125px;
 }
 
 .clues ul {
-  margin: 0 auto;
   column-count: 2;
-  padding: 0 2rem;
+}
+
+.clues ul li {
+  border-bottom: 1px solid var(--border);
+  page-break-inside: avoid;
+  padding: 0.075rem 0;
+}
+
+/* Reponsive */
+
+@media (max-width: 768px) {
+  .clues {
+    display: flex;
+    line-height: 1.5;
+    margin: 15px 0px;
+  }
+
+  .clues ul {
+    margin: 0 auto;
+    column-count: auto;
+    padding: 0 1.5rem;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
+}
+
+/* Dark Mode */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+}
+
+.check {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-color: #8AB4F8;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked~.check {
+  background: #fff;
+  /* box-shadow: 0 0 0 1200px #092c3e; */
+}
+
+.check::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked~.check::before {
+  transform: translateX(-50px);
+}
+
+.check::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #092c3e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.3s;
+  transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked~.check::after {
+  transform: translateX(0px);
 }
