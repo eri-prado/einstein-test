@@ -1,6 +1,6 @@
 // Dark Mode
 const html = document.querySelector('html')
-const checkbox = document.querySelector('input[type="checkbox"]')
+const checkbox = document.querySelector('#btn-dark-mode')
 
 checkbox.addEventListener('change', function () {
   html.classList.toggle('dark-mode')
@@ -82,8 +82,6 @@ function solution() {
   document.querySelectorAll("select")[24].selectedIndex = 1
 }
 
-
-
 // Reset
 function reset() {
   const house = document.querySelectorAll("ul")
@@ -96,3 +94,8 @@ function reset() {
     element.selectedIndex = 0;
   })
 }
+
+// Clues
+
+
+

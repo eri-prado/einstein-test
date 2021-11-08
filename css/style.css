@@ -15,7 +15,7 @@
   --body-bg: #212529;
   --title-color: #8AB4F8;
   --text-color: #899095;
-  --border: #555;
+  --border: #888888;
   --select-bg: #555;
   --select-text: #e7e7e7;
   --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.300);
@@ -60,6 +60,37 @@ p {
   align-items: center;
 }
 
+.clues li {
+  display: flex;
+  align-items: center;
+}
+
+.clues label,
+.clues input,
+.clues ul,
+.clues li {
+  cursor: pointer;
+}
+
+#check1:checked+label,
+#check2:checked+label,
+#check3:checked+label,
+#check4:checked+label,
+#check5:checked+label,
+#check6:checked+label,
+#check7:checked+label,
+#check8:checked+label,
+#check9:checked+label,
+#check10:checked+label,
+#check11:checked+label,
+#check12:checked+label,
+#check13:checked+label,
+#check14:checked+label,
+#check15:checked+label {
+  color: #e24949;
+  text-decoration: line-through;
+}
+
 .header {
   margin: 25px 0;
   text-align: center;
@@ -95,7 +126,7 @@ p {
   width: 150px;
   margin: 5px;
   padding: 10px;
-  deco border: 1px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: 0.25rem;
   box-shadow: var(--box-shadow);
 }
@@ -125,7 +156,7 @@ select {
 .clues {
   display: flex;
   line-height: 1.5;
-  margin: 15px 25px 15px 125px;
+  margin: 15px 25px 15px 50px;
 }
 
 .clues ul {
@@ -136,6 +167,11 @@ select {
   border-bottom: 1px solid var(--border);
   page-break-inside: avoid;
   padding: 0.075rem 0;
+  cursor: pointer;
+}
+
+.clues input {
+  margin-right: 15px;
 }
 
 /* Reponsive */
@@ -153,8 +189,9 @@ select {
     padding: 0 1.5rem;
   }
 
-  p {
-    text-align: center;
+  .description,
+  .clues p {
+    line-height: 1.5;
   }
 
   h1 {
@@ -163,12 +200,12 @@ select {
   }
 }
 
-/* Dark Mode */
-input[type="checkbox"] {
+/* Button Dark Mode */
+#btn-dark-mode {
   -webkit-appearance: none;
 }
 
-.check {
+.btn-dark-mode {
   position: relative;
   display: block;
   width: 40px;
@@ -180,12 +217,12 @@ input[type="checkbox"] {
   transition: ease-in 0.5s;
 }
 
-input[type="checkbox"]:checked~.check {
-  background: #fff;
+#btn-dark-mode:checked~.btn-dark-mode {
+  background: #8AB4F8;
   /* box-shadow: 0 0 0 1200px #092c3e; */
 }
 
-.check::before {
+.btn-dark-mode::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -197,16 +234,16 @@ input[type="checkbox"]:checked~.check {
   transition: 0.3s;
 }
 
-input[type="checkbox"]:checked~.check::before {
+#btn-dark-mode:checked~.btn-dark-mode::before {
   transform: translateX(-50px);
 }
 
-.check::after {
+.btn-dark-mode::after {
   content: '';
   position: absolute;
   top: 2px;
   left: 2px;
-  background: #092c3e;
+  background: #212529;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -214,6 +251,6 @@ input[type="checkbox"]:checked~.check::before {
   transform: translateX(50px);
 }
 
-input[type="checkbox"]:checked~.check::after {
+#btn-dark-mode:checked~.btn-dark-mode::after {
   transform: translateX(0px);
 }
