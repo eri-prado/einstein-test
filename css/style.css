@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 
 :root {
-  --body-bg: #fafafa;
-  --title-color: #8AB4F8;
+  --body-bg: #f1f5f9;
+  --title-color: #31A7FB;
   --text-color: #555;
   --border: #e7e7e7;
   --select-bg: #fff;
   --select-text: #555;
-  --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.100);
+  --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.050);
 }
 
 .dark-mode:root {
-  --body-bg: #212529;
-  --title-color: #8AB4F8;
+  --body-bg: #252525;
+  /* #0F172A */
+  --title-color: #31A7FB;
   --text-color: #899095;
-  --border: #888888;
+  --border: #303030;
   --select-bg: #555;
   --select-text: #e7e7e7;
   --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.300);
@@ -43,6 +44,40 @@ body {
   font-size: 1rem;
   color: var(--text-color);
   background-color: var(--body-bg);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 0 50px;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+#btn-reset,
+#btn-solution {
+  border-radius: 25px;
+  color: #ffffff;
+  font-family: inherit;
+  padding: 10px 25px 10px 25px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+#btn-reset {
+  color: #31A7FB;
+  background: transparent;
+  border: solid 2px #31A7FB;
+}
+
+#btn-solution {
+  color: white;
+  background: #31A7FB;
+  border: solid 2px #31A7FB
 }
 
 h1 {
@@ -91,7 +126,7 @@ p {
   text-decoration: line-through;
 }
 
-.header {
+.informations {
   margin: 25px 0;
   text-align: center;
 }
@@ -210,7 +245,7 @@ select {
   display: block;
   width: 40px;
   height: 20px;
-  background-color: #8AB4F8;
+  background-color: #31A7FB;
   cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
@@ -218,8 +253,8 @@ select {
 }
 
 #btn-dark-mode:checked~.btn-dark-mode {
-  background: #8AB4F8;
-  /* box-shadow: 0 0 0 1200px #092c3e; */
+  background: #31A7FB;
+
 }
 
 .btn-dark-mode::before {
@@ -235,7 +270,7 @@ select {
 }
 
 #btn-dark-mode:checked~.btn-dark-mode::before {
-  transform: translateX(-50px);
+  transform: translateX(50px);
 }
 
 .btn-dark-mode::after {
@@ -248,9 +283,9 @@ select {
   height: 16px;
   border-radius: 50%;
   transition: 0.3s;
-  transform: translateX(50px);
+  transform: translateX(-50px);
 }
 
 #btn-dark-mode:checked~.btn-dark-mode::after {
-  transform: translateX(0px);
+  transform: translateX(20px);
 }

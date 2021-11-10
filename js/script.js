@@ -94,8 +94,3 @@ function reset() {
     element.selectedIndex = 0;
   })
 }
-
-// Clues
-
-
-

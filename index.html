@@ -10,16 +10,26 @@
 </head>
 
 <body>
-  
-  <div class="container">
+  <header>
+    <div>
+      <button id="btn-reset" onclick="reset()">Resetar</button>
+      <button id="btn-solution" onclick="solution()">Solução</button>
+    </div>
+    
     <label>
+      <img src="" alt="">
       <input type="checkbox" id="btn-dark-mode">
       <span class="btn-dark-mode"></span>
+      <img src="" alt="">
     </label>
-    <header class="header">
+  </header>
+  <div class="container">
+
+    <div class="informations">
+      <img src="img/einstein.png" id="img-einstein" alt="Einstein">
       <h1>Teste de Einstein</h1>
       <p class="description">Albert Einstein criou este teste de QI (raciocínio lógico) no século passado e afirmou que 98% da população mundial não era capaz de resolvê-lo. Será que você faz parte desse seleto grupo que consegue resolvê-lo?</p>
-    </header>
+    </div>
     <div class="game">
       <div class="container-columns">
         <div class="column1">
@@ -436,8 +446,7 @@
         </ul>
       </div>
     </div>
-    <button onclick="reset()">Resetar</button>
-    <button onclick="solution()">Solução</button>
+  
   </div>
   <script src="js/script.js"></script>
 </body>
