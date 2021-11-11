@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 
 :root {
-  --body-bg: #f1f5f9;
+  --header-bg: #fff;
+  --main-bg: #f1f5f9;
   --title-color: #31A7FB;
   --text-color: #555;
   --border: #e7e7e7;
   --select-bg: #fff;
   --select-text: #555;
-  --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.050);
+  --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)s;
 }
 
 .dark-mode:root {
-  --body-bg: #252525;
-  /* #0F172A */
+  --header-bg: #303030;
+  --main-bg: #252525;
   --title-color: #31A7FB;
   --text-color: #899095;
   --border: #303030;
-  --select-bg: #555;
+  --select-bg: #303030;
   --select-text: #e7e7e7;
   --box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.300);
 }
@@ -43,7 +44,7 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   font-size: 1rem;
   color: var(--text-color);
-  background-color: var(--body-bg);
+  background-color: var(--main-bg);
 }
 
 header {
@@ -53,7 +54,7 @@ header {
   top: 0;
   padding: 0 50px;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--header-bg);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -81,7 +82,7 @@ header {
 }
 
 h1 {
-  font-family: 'Mochiy Pop One', Arial, sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
   font-size: 3rem;
   color: var(--title-color);
   line-height: 1;
@@ -122,7 +123,7 @@ p {
 #check13:checked+label,
 #check14:checked+label,
 #check15:checked+label {
-  color: #e24949;
+  color: #31A7FB;
   text-decoration: line-through;
 }
 
@@ -209,32 +210,6 @@ select {
   margin-right: 15px;
 }
 
-/* Reponsive */
-
-@media (max-width: 768px) {
-  .clues {
-    display: flex;
-    line-height: 1.5;
-    margin: 15px 0px;
-  }
-
-  .clues ul {
-    margin: 0 auto;
-    column-count: auto;
-    padding: 0 1.5rem;
-  }
-
-  .description,
-  .clues p {
-    line-height: 1.5;
-  }
-
-  h1 {
-    line-height: 1.1;
-    letter-spacing: 2px;
-  }
-}
-
 /* Button Dark Mode */
 #btn-dark-mode {
   -webkit-appearance: none;
@@ -288,4 +263,35 @@ select {
 
 #btn-dark-mode:checked~.btn-dark-mode::after {
   transform: translateX(20px);
+}
+
+/* Reponsive */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 0 25px;
+  }
+
+  .clues {
+    display: flex;
+    line-height: 1.5;
+    margin: 15px 0px;
+  }
+
+  .clues ul {
+    margin: 0 auto;
+    column-count: auto;
+    padding: 0 1.5rem;
+  }
+
+  .description,
+  .clues p {
+    line-height: 1.5;
+  }
+
+  h1 {
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
 }

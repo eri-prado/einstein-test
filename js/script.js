@@ -38,6 +38,13 @@ function colorHouse5(list) {
   house.style.background = optionValue
 }
 
+// Win
+
+var selectes = document.querySelectorAll("select")[0]
+if (selectes.selectedIndex === 1) {
+  console.log('Você venceu')
+}
+
 // Solution
 function solution() {
   // house 1
