@@ -1,3 +1,5 @@
+'use strict'
+
 // Dark Mode
 const html = document.querySelector('html')
 const checkbox = document.querySelector('#btn-dark-mode')
